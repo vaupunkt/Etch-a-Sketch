@@ -13,8 +13,8 @@ body {
 #container {
 	display: grid;
 	gap: 0px;
-	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: repeat(16, 1fr);
+	grid-template-columns: repeat(var(--size), 1fr);
+	grid-template-rows: repeat(var(--size), 1fr);
 	margin: auto;
 	height: 400px;
 	width: 400px;
