@@ -1,8 +1,10 @@
 const changeSizeButton = document.querySelector("#changeSize");
 const resetButton = document.querySelector("#reset");
+const colorModeButton = document.querySelector("#colorMode");
 const container = document.querySelector("#container");
 
 let size = 16;
+let colorMode = false;
 
 function createGrid(size) {
 	container.innerHTML = "";
@@ -12,7 +14,16 @@ function createGrid(size) {
 			square.classList.add("square");
 			container.appendChild(square);
 			square.addEventListener("mouseover", (event) => {
-				square.classList.add("hover");
+				if (colorMode) {
+					const r = Math.floor(Math.random() * 256);
+					const g = Math.floor(Math.random() * 256);
+					const b = Math.floor(Math.random() * 256);
+					square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+					square.style.transition = "background-color 0.5s ease";
+				} else {
+					square.style.backgroundColor = "";
+					square.classList.add("hover");
+				}
 			});
 		}
 	}
@@ -29,6 +40,13 @@ changeSizeButton.addEventListener("click", (event) => {
 
 resetButton.addEventListener("click", (event) => {
 	createGrid(size);
+});
+
+colorModeButton.addEventListener("click", (event) => {
+	colorMode = !colorMode;
+	colorModeButton.textContent = colorMode
+		? "Black and white mode"
+		: "Color mode";
 });
 
 createGrid(16);
