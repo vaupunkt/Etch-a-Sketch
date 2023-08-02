@@ -2,6 +2,31 @@ body {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+}
+
+main {
+	padding: 0 50px;
+}
+
+#button_container {
+	display: flex;
+	justify-content: space-around;
+	padding: 30px;
+}
+
+button {
+	font-size: 1em;
+	font-weight: 800;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: white;
 }
 
 .square {
