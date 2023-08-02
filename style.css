@@ -1,0 +1,26 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.square {
+	border: 1px solid black;
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	display: grid;
+	gap: 0px;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(16, 1fr);
+	margin: auto;
+	height: 400px;
+	width: 400px;
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
+.hover {
+	background-color: black;
+}
