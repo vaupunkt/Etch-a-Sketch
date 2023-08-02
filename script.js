@@ -4,5 +4,8 @@ for (let y = 0; y < 16; y++) {
 		const square = document.createElement("div");
 		square.classList.add("square");
 		container.appendChild(square);
+		square.addEventListener("mouseover", (event) => {
+			square.classList.add("hover");
+		});
 	}
 }
